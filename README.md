@@ -81,19 +81,19 @@ PROJEK SKRIPSI/
 1. Clone repository:
 
 ```id="skr02"
-git clone https://github.com/Mannasd/nama-repo-skripsi.git
+[https://github.com/Mannasd/prediksi_mean_finish_time_trail_run]
 ```
 
 2. Masuk ke direktori:
 
 ```id="skr03"
-cd nama-repo-skripsi
+cd prediksi_mean_finish_time_trail_run
 ```
 
 3. Install dependencies:
 
 ```id="skr04"
-pip install -r requirements.txt
+Just follow the notebok
 ```
 
 ## Usage
