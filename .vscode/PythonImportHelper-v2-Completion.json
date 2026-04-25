@@ -1,0 +1,278 @@
+[
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "joblib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "joblib",
+        "description": "joblib",
+        "detail": "joblib",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "BaseEstimator",
+        "importPath": "sklearn.base",
+        "description": "sklearn.base",
+        "isExtraImport": true,
+        "detail": "sklearn.base",
+        "documentation": {}
+    },
+    {
+        "label": "RegressorMixin",
+        "importPath": "sklearn.base",
+        "description": "sklearn.base",
+        "isExtraImport": true,
+        "detail": "sklearn.base",
+        "documentation": {}
+    },
+    {
+        "label": "get_nutrition_plan",
+        "importPath": "nutrition",
+        "description": "nutrition",
+        "isExtraImport": true,
+        "detail": "nutrition",
+        "documentation": {}
+    },
+    {
+        "label": "carb_rate_by_duration",
+        "kind": 2,
+        "importPath": "nutrition",
+        "description": "nutrition",
+        "peekOfCode": "def carb_rate_by_duration(hours):\n    if hours < 1:\n        return 0\n    elif hours < 2:\n        return 30\n    elif hours < 3:\n        return 60\n    else:\n        return 90\ndef carb_rate_by_weight(weight_kg):",
+        "detail": "nutrition",
+        "documentation": {}
+    },
+    {
+        "label": "carb_rate_by_weight",
+        "kind": 2,
+        "importPath": "nutrition",
+        "description": "nutrition",
+        "peekOfCode": "def carb_rate_by_weight(weight_kg):\n    return 0.7 * weight_kg  # g/hour\n# ==============================\n# HYDRATION\n# ==============================\ndef hydration_recommendation(hours):\n    \"\"\"\n    General endurance guideline:\n    ~400–800 ml/hour tergantung kondisi\n    \"\"\"",
+        "detail": "nutrition",
+        "documentation": {}
+    },
+    {
+        "label": "hydration_recommendation",
+        "kind": 2,
+        "importPath": "nutrition",
+        "description": "nutrition",
+        "peekOfCode": "def hydration_recommendation(hours):\n    \"\"\"\n    General endurance guideline:\n    ~400–800 ml/hour tergantung kondisi\n    \"\"\"\n    return {\n        \"per_hour_ml\": \"400–800 ml\",\n        \"note\": \"Tambahkan elektrolit untuk race >2 jam\"\n    }\n# ==============================",
+        "detail": "nutrition",
+        "documentation": {}
+    },
+    {
+        "label": "protein_recommendation",
+        "kind": 2,
+        "importPath": "nutrition",
+        "description": "nutrition",
+        "peekOfCode": "def protein_recommendation(weight_kg):\n    \"\"\"\n    1.2 – 1.4 g/kg/day\n    \"\"\"\n    low = 1.2 * weight_kg\n    high = 1.4 * weight_kg\n    return {\n        \"daily_range\": f\"{low:.0f}–{high:.0f} g/hari\",\n        \"note\": \"Untuk recovery setelah race\"\n    }",
+        "detail": "nutrition",
+        "documentation": {}
+    },
+    {
+        "label": "fat_recommendation",
+        "kind": 2,
+        "importPath": "nutrition",
+        "description": "nutrition",
+        "peekOfCode": "def fat_recommendation(weight_kg):\n    \"\"\"\n    ~1 g/kg/day\n    \"\"\"\n    fat = 1.0 * weight_kg\n    return {\n        \"daily\": f\"{fat:.0f} g/hari\",\n        \"note\": \"20–35% total kalori\"\n    }\n# ==============================",
+        "detail": "nutrition",
+        "documentation": {}
+    },
+    {
+        "label": "calorie_estimation",
+        "kind": 2,
+        "importPath": "nutrition",
+        "description": "nutrition",
+        "peekOfCode": "def calorie_estimation(weight_kg):\n    \"\"\"\n    37–41 kcal/kg/day\n    \"\"\"\n    low = 37 * weight_kg\n    high = 41 * weight_kg\n    return {\n        \"daily_range\": f\"{low:.0f}–{high:.0f} kcal\",\n        \"note\": \"Menyesuaikan intensitas latihan\"\n    }",
+        "detail": "nutrition",
+        "documentation": {}
+    },
+    {
+        "label": "get_nutrition_plan",
+        "kind": 2,
+        "importPath": "nutrition",
+        "description": "nutrition",
+        "peekOfCode": "def get_nutrition_plan(hours, weight_kg=None):\n    # ======================\n    # CARBS\n    # ======================\n    base_rate = carb_rate_by_duration(hours)\n    if weight_kg:\n        personal_rate = carb_rate_by_weight(weight_kg)\n        carb_rate = (base_rate + personal_rate) / 2\n    else:\n        carb_rate = base_rate",
+        "detail": "nutrition",
+        "documentation": {}
+    },
+    {
+        "label": "generate_carb_note",
+        "kind": 2,
+        "importPath": "nutrition",
+        "description": "nutrition",
+        "peekOfCode": "def generate_carb_note(hours):\n    if hours < 1:\n        return \"Cukup hidrasi\"\n    elif hours < 3:\n        return \"Gunakan gel/minuman karbohidrat\"\n    else:\n        return \"Gunakan kombinasi glucose + fructose untuk optimal absorption\"",
+        "detail": "nutrition",
+        "documentation": {}
+    },
+    {
+        "label": "TransformedTargetEstimator",
+        "kind": 6,
+        "importPath": "Skripsi",
+        "description": "Skripsi",
+        "peekOfCode": "class TransformedTargetEstimator(BaseEstimator, RegressorMixin):\n    def __init__(self, regressor, fwd=None, inv=None):\n        self.regressor, self.fwd, self.inv = regressor, fwd, inv\n    def predict(self, X):\n        y_pred_t = self.regressor_.predict(X)\n        return np.asarray(self.inv(y_pred_t) if self.inv else y_pred_t, dtype=float)\n# FUNGSI TRAIL RUN\ndef calculate_km_effort(distance_km, elevation_gain_m):\n    return distance_km + (elevation_gain_m / 100)\ndef categorize_race(km_effort):",
+        "detail": "Skripsi",
+        "documentation": {}
+    },
+    {
+        "label": "fwd_log",
+        "kind": 2,
+        "importPath": "Skripsi",
+        "description": "Skripsi",
+        "peekOfCode": "def fwd_log(y):\n    return np.log(np.asarray(y, float))\ndef inv_exp(yt):\n    return np.exp(np.asarray(yt, float))\nclass TransformedTargetEstimator(BaseEstimator, RegressorMixin):\n    def __init__(self, regressor, fwd=None, inv=None):\n        self.regressor, self.fwd, self.inv = regressor, fwd, inv\n    def predict(self, X):\n        y_pred_t = self.regressor_.predict(X)\n        return np.asarray(self.inv(y_pred_t) if self.inv else y_pred_t, dtype=float)",
+        "detail": "Skripsi",
+        "documentation": {}
+    },
+    {
+        "label": "inv_exp",
+        "kind": 2,
+        "importPath": "Skripsi",
+        "description": "Skripsi",
+        "peekOfCode": "def inv_exp(yt):\n    return np.exp(np.asarray(yt, float))\nclass TransformedTargetEstimator(BaseEstimator, RegressorMixin):\n    def __init__(self, regressor, fwd=None, inv=None):\n        self.regressor, self.fwd, self.inv = regressor, fwd, inv\n    def predict(self, X):\n        y_pred_t = self.regressor_.predict(X)\n        return np.asarray(self.inv(y_pred_t) if self.inv else y_pred_t, dtype=float)\n# FUNGSI TRAIL RUN\ndef calculate_km_effort(distance_km, elevation_gain_m):",
+        "detail": "Skripsi",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_km_effort",
+        "kind": 2,
+        "importPath": "Skripsi",
+        "description": "Skripsi",
+        "peekOfCode": "def calculate_km_effort(distance_km, elevation_gain_m):\n    return distance_km + (elevation_gain_m / 100)\ndef categorize_race(km_effort):\n    if km_effort < 42:\n        return \"Short Trail\"\n    elif km_effort < 75:\n        return \"50K\"\n    elif km_effort < 120:\n        return \"100K\"\n    else:",
+        "detail": "Skripsi",
+        "documentation": {}
+    },
+    {
+        "label": "categorize_race",
+        "kind": 2,
+        "importPath": "Skripsi",
+        "description": "Skripsi",
+        "peekOfCode": "def categorize_race(km_effort):\n    if km_effort < 42:\n        return \"Short Trail\"\n    elif km_effort < 75:\n        return \"50K\"\n    elif km_effort < 120:\n        return \"100K\"\n    else:\n        return \"100M\"\ndef format_time(hours_float):",
+        "detail": "Skripsi",
+        "documentation": {}
+    },
+    {
+        "label": "format_time",
+        "kind": 2,
+        "importPath": "Skripsi",
+        "description": "Skripsi",
+        "peekOfCode": "def format_time(hours_float):\n    jam = int(hours_float)\n    menit = int((hours_float - jam) * 60)\n    return jam, menit\n# CONFIG PAGE\nst.set_page_config(\n    page_title=\"Trail Running Predictor\",\n    page_icon=\"🏃\",\n    layout=\"wide\"\n)",
+        "detail": "Skripsi",
+        "documentation": {}
+    },
+    {
+        "label": "load_model",
+        "kind": 2,
+        "importPath": "Skripsi",
+        "description": "Skripsi",
+        "peekOfCode": "def load_model():\n    if os.path.exists(MODEL_PATH):\n        return joblib.load(MODEL_PATH)\n    return None\nmodel = load_model()\nif model is None:\n    st.error(f\"❌ Model tidak ditemukan di `{MODEL_PATH}`\")\n    st.stop()\n# SIDEBAR INPUT\nst.sidebar.header(\"🏔️ Input Parameter\")",
+        "detail": "Skripsi",
+        "documentation": {}
+    },
+    {
+        "label": "MODEL_PATH",
+        "kind": 5,
+        "importPath": "Skripsi",
+        "description": "Skripsi",
+        "peekOfCode": "MODEL_PATH = \"output_Skripsi_Final_Lengkap/Model_D_90_10.pkl\"\n@st.cache_resource\ndef load_model():\n    if os.path.exists(MODEL_PATH):\n        return joblib.load(MODEL_PATH)\n    return None\nmodel = load_model()\nif model is None:\n    st.error(f\"❌ Model tidak ditemukan di `{MODEL_PATH}`\")\n    st.stop()",
+        "detail": "Skripsi",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "Skripsi",
+        "description": "Skripsi",
+        "peekOfCode": "model = load_model()\nif model is None:\n    st.error(f\"❌ Model tidak ditemukan di `{MODEL_PATH}`\")\n    st.stop()\n# SIDEBAR INPUT\nst.sidebar.header(\"🏔️ Input Parameter\")\ndist = st.sidebar.number_input(\n    \"Jarak (km)\", 1.0, 200.0, 50.0\n)\nelev = st.sidebar.number_input(",
+        "detail": "Skripsi",
+        "documentation": {}
+    },
+    {
+        "label": "dist",
+        "kind": 5,
+        "importPath": "Skripsi",
+        "description": "Skripsi",
+        "peekOfCode": "dist = st.sidebar.number_input(\n    \"Jarak (km)\", 1.0, 200.0, 50.0\n)\nelev = st.sidebar.number_input(\n    \"Elevation Gain (m)\", 0, 15000, 2500\n)\nmonth = st.sidebar.slider(\n    \"Bulan Event\", 1, 12, 8\n)\nweight = st.sidebar.number_input(",
+        "detail": "Skripsi",
+        "documentation": {}
+    },
+    {
+        "label": "elev",
+        "kind": 5,
+        "importPath": "Skripsi",
+        "description": "Skripsi",
+        "peekOfCode": "elev = st.sidebar.number_input(\n    \"Elevation Gain (m)\", 0, 15000, 2500\n)\nmonth = st.sidebar.slider(\n    \"Bulan Event\", 1, 12, 8\n)\nweight = st.sidebar.number_input(\n    \"Berat Badan (kg) [Opsional]\", 30, 120, 65\n)\n# ANALISIS REAL-TIME",
+        "detail": "Skripsi",
+        "documentation": {}
+    },
+    {
+        "label": "month",
+        "kind": 5,
+        "importPath": "Skripsi",
+        "description": "Skripsi",
+        "peekOfCode": "month = st.sidebar.slider(\n    \"Bulan Event\", 1, 12, 8\n)\nweight = st.sidebar.number_input(\n    \"Berat Badan (kg) [Opsional]\", 30, 120, 65\n)\n# ANALISIS REAL-TIME\nkm_effort = calculate_km_effort(dist, elev)\ncategory = categorize_race(km_effort)\nst.sidebar.markdown(\"### 📊 Analisis Trail\")",
+        "detail": "Skripsi",
+        "documentation": {}
+    },
+    {
+        "label": "weight",
+        "kind": 5,
+        "importPath": "Skripsi",
+        "description": "Skripsi",
+        "peekOfCode": "weight = st.sidebar.number_input(\n    \"Berat Badan (kg) [Opsional]\", 30, 120, 65\n)\n# ANALISIS REAL-TIME\nkm_effort = calculate_km_effort(dist, elev)\ncategory = categorize_race(km_effort)\nst.sidebar.markdown(\"### 📊 Analisis Trail\")\nst.sidebar.info(f\"\"\"\nKM Effort: {km_effort:.1f}  \nKategori: {category}",
+        "detail": "Skripsi",
+        "documentation": {}
+    },
+    {
+        "label": "km_effort",
+        "kind": 5,
+        "importPath": "Skripsi",
+        "description": "Skripsi",
+        "peekOfCode": "km_effort = calculate_km_effort(dist, elev)\ncategory = categorize_race(km_effort)\nst.sidebar.markdown(\"### 📊 Analisis Trail\")\nst.sidebar.info(f\"\"\"\nKM Effort: {km_effort:.1f}  \nKategori: {category}\n\"\"\")\n# PREDIKSI\nif st.sidebar.button(\"🔥 Hitung Prediksi\"):\n    input_df = pd.DataFrame({",
+        "detail": "Skripsi",
+        "documentation": {}
+    },
+    {
+        "label": "category",
+        "kind": 5,
+        "importPath": "Skripsi",
+        "description": "Skripsi",
+        "peekOfCode": "category = categorize_race(km_effort)\nst.sidebar.markdown(\"### 📊 Analisis Trail\")\nst.sidebar.info(f\"\"\"\nKM Effort: {km_effort:.1f}  \nKategori: {category}\n\"\"\")\n# PREDIKSI\nif st.sidebar.button(\"🔥 Hitung Prediksi\"):\n    input_df = pd.DataFrame({\n        \"distance_km\": [dist],",
+        "detail": "Skripsi",
+        "documentation": {}
+    }
+]
